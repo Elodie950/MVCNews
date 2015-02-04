@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2013 for Web
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCNews", "MVCNews\MVCNews.csproj", "{66488ABD-07AE-4F38-B63F-3D235F50F7DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Info.DAL", "News.DAL\Info.DAL.csproj", "{DB7FA10C-4729-4BBE-8737-2D55EFD66C6A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{66488ABD-07AE-4F38-B63F-3D235F50F7DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66488ABD-07AE-4F38-B63F-3D235F50F7DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66488ABD-07AE-4F38-B63F-3D235F50F7DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66488ABD-07AE-4F38-B63F-3D235F50F7DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB7FA10C-4729-4BBE-8737-2D55EFD66C6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB7FA10C-4729-4BBE-8737-2D55EFD66C6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB7FA10C-4729-4BBE-8737-2D55EFD66C6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB7FA10C-4729-4BBE-8737-2D55EFD66C6A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
