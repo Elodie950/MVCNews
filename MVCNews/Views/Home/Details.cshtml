@@ -1,0 +1,12 @@
+﻿@model MVCNews.Models.JournalistNews
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>@Model.Nouvelle.TitreNews</h2>
+<img src="~/Content/images/@Model.Nouvelle.ImageNews" alt="" />
+<p>@Model.Nouvelle.InfoNews</p>
+<p>@Model.Auteur.NameJournalist @Model.Auteur.FirstNameJournalist</p>
+<p>@Model.Nouvelle.DateNews.ToShortDateString()</p>
+

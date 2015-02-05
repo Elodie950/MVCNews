@@ -1,0 +1,5 @@
+﻿@model IEnumerable<Info.DAL.News>
+@foreach (var currentNews in Model)
+{
+    Html.RenderPartial("_news", currentNews);
+}

@@ -77,13 +77,55 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\images\adverts\300x250.gif" />
+    <Content Include="Content\images\adverts\468x60.gif" />
+    <Content Include="Content\images\adverts\728x90.gif" />
+    <Content Include="Content\images\aigles.jpg" />
     <Content Include="Content\images\Alexander_de_croo.jpg" />
+    <Content Include="Content\images\backgrounds\bg_branding.png" />
+    <Content Include="Content\images\backgrounds\homebottom.png" />
+    <Content Include="Content\images\barbara.jpg" />
+    <Content Include="Content\images\charle_michel.jpg" />
     <Content Include="Content\images\dancing_Le_carre.jpg" />
+    <Content Include="Content\images\dieudonne.jpg" />
     <Content Include="Content\images\dodo_la_saumure.jpg" />
+    <Content Include="Content\images\featured_image01.jpg" />
+    <Content Include="Content\images\featured_image02.jpg" />
+    <Content Include="Content\images\featured_image03.jpg" />
+    <Content Include="Content\images\foot_can.jpg" />
+    <Content Include="Content\images\home_category_image01.jpg" />
+    <Content Include="Content\images\home_category_image02.jpg" />
+    <Content Include="Content\images\home_category_image03.jpg" />
+    <Content Include="Content\images\icons\icon_categories.gif" />
+    <Content Include="Content\images\icons\icon_comment.gif" />
+    <Content Include="Content\images\icons\icon_comments.gif" />
+    <Content Include="Content\images\icons\icon_links.gif" />
+    <Content Include="Content\images\icons\icon_meta.gif" />
+    <Content Include="Content\images\icons\icon_recent.gif" />
+    <Content Include="Content\images\icons\icon_smile.gif" />
+    <Content Include="Content\images\icons\rss.gif" />
+    <Content Include="Content\images\icons\search-16.png" />
+    <Content Include="Content\images\largeimage.jpg" />
+    <Content Include="Content\images\leadimage.jpg" />
     <Content Include="Content\images\Marc_Leemans.jpg" />
     <Content Include="Content\images\neige.jpg" />
+    <Content Include="Content\images\nva.jpg" />
     <Content Include="Content\images\reynders.jpg" />
+    <Content Include="Content\images\section-teaser-image.jpg" />
+    <Content Include="Content\images\sectionimage.jpg" />
+    <Content Include="Content\images\vangogh.jpg" />
+    <Content Include="Content\css\styles\nav.css" />
+    <Content Include="Content\css\styles\plugins.css" />
+    <Content Include="Content\css\styles\print.css" />
+    <Content Include="Content\css\styles\template-style.css" />
     <Content Include="Global.asax" />
+    <Content Include="Areas\Membre\Views\web.config" />
+    <Content Include="Areas\Membre\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Membre\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Membre\Views\Login\SeLogger.cshtml" />
+    <Content Include="Content\images\Thumbs.db" />
+    <Content Include="Areas\Membre\Views\CrudNews\InsererNews.cshtml" />
+    <Content Include="Areas\Membre\Views\CrudNews\Modifier.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -92,16 +134,21 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\js\dropdowns.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Membre\Controllers\CrudNewsController.cs" />
+    <Compile Include="Areas\Membre\Controllers\LoginController.cs" />
+    <Compile Include="Areas\Membre\MembreAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\CustHelper.cs" />
     <Compile Include="Models\JournalistNews.cs" />
+    <Compile Include="Models\SessionTools.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -112,6 +159,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_news.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\LesNews.cshtml" />
+    <Content Include="Views\Home\Details.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -121,7 +170,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\css\" />
+    <Folder Include="Areas\Membre\Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\News.DAL\Info.DAL.csproj">

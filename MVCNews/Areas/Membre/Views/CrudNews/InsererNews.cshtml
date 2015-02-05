@@ -1,0 +1,13 @@
+﻿@model Info.DAL.News
+
+@{
+    ViewBag.Title = "InsererNews";
+}
+
+<h2>Insérez votre article</h2>
+<form action="~/Membre/CrudNews/InsererNewsDB" method="post">
+    <input type="text" placeholder="titre de l'article" name="titreNews" />
+    <textarea placeholder="corps de l'article" name="infoNews"></textarea>
+    <input type="text" placeholder="image" name="imageNews" />
+    <input type="submit" value="Enregistrez" />
+</form>

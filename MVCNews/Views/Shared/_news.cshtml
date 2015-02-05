@@ -1,6 +1,12 @@
 ﻿@model Info.DAL.News
 
-<h3>@Model.TitreNews</h3>
-<img src="Content/images/@Model.ImageNews" alt="" />
-<p>@Model.InfoNews</p>
-<p>@Model.DateNews.ToShortDateString()</p>
+<form action="~/Home/Details" method="post">
+    <h3>@Model.TitreNews</h3>
+    <img src="~/Content/images/@Model.ImageNews" alt="" />
+    <input type="hidden" value="@Model.IdNews" name="idNews"/>
+    <input type="hidden" value="@Model.IdJournalist" name="idJournalist" />
+    <input type="submit" value="Lire l'article" />
+</form>
+@Html.ActionLink("Modifier", "Modifier", new { area ="Membre", controller = "CrudNews", id=Model.IdNews})
+@Html.ActionLink("Supprimer", "Supprimer", new { area = "Membre", controller = "CrudNews", id = Model.IdNews })
+

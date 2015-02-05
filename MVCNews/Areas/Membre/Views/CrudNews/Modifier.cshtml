@@ -1,0 +1,15 @@
+﻿@model Info.DAL.News
+
+@{
+    ViewBag.Title = "Modifier";
+}
+
+<form method="post" action="~/Membre/CrudNews/Modifier">
+    <input type="text" value="@Model.TitreNews" name="titreNews"/>
+    <textarea name="infoNews">@Model.InfoNews</textarea>
+    <input type="text" value="@Model.ImageNews" />
+    <input type="hidden" value="@Model.IdNews" />
+    <input type="text" value="@Model.IdJournalist" />
+    <input type="submit" value="Enregistrer"/>
+
+</form>

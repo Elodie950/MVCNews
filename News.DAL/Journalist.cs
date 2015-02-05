@@ -104,6 +104,18 @@ namespace Info.DAL
             //return retour;
         }
 
+        public static Journalist AuthentifieMoi(string login, string password)
+        {
+            List<Dictionary<string, object>> infoJournalist = GestionConnexion.Instance.getData("Select * from Journalist where LoginJournalist='" + login + "' and PasswordJournalist='" + password + "'");
+            Journalist retour = null;
+            if (infoJournalist.Count > 0)
+            {
+                int idJournalist = (int)infoJournalist[0]["idJournalist"];
+                retour = Journalist.ChargerUnJournalist(idJournalist);
+            }
+            return retour;
+        }
+       
 
     }
 }

@@ -55,7 +55,7 @@ namespace Info.DAL
 
         public static List<News> ChargerToutesLesNews()
         {
-            List<Dictionary<string, object>> lesNews = GestionConnexion.Instance.getData("select * from News");
+            List<Dictionary<string, object>> lesNews = GestionConnexion.Instance.getData("select * from News order by idNews DESC");
             List<News> maList = new List<News>();
             foreach (Dictionary<string, object> item in lesNews)
             {
@@ -114,6 +114,55 @@ namespace Info.DAL
             }
             return maList;
         }
+
+          public virtual bool InsererNews(string infoNews, string titreNews, string imageNews, int idJournalist)
+          {
+              DateTime d = DateTime.Now;
+              string query = "Insert into News(infoNews, titreNews, imageNews, dateNews, idJournalist) Values (@infoNews, @titreNews, @imageNews, @dateNews, @idJournalist)";
+
+              Dictionary<string, object> valeurs = new Dictionary<string, object>();
+              valeurs.Add("infoNews", infoNews);
+              valeurs.Add("titreNews", titreNews);
+              valeurs.Add("imageNews", imageNews);
+              valeurs.Add("dateNews", d);
+              valeurs.Add("idJournalist", idJournalist);
+
+              if (GestionConnexion.Instance.saveData(query, GenerateKey.APP, valeurs))
+              {
+                  return true;
+              }
+              else {
+                  return false;
+              }
+          }
+
+          public virtual bool ModifierNews()
+          {
+              News n = News.ChargerUneNews(this.IdNews);
+
+              string query = @"UPDATE News
+                                        SET [TitreNews] = @TitreNews,
+                                            [InfoNews] = @InfoNews,
+                                            [ImageNews] = @ImageNews,
+                                            [idJournalist] = @idJournalist,
+                                            WHERE [idNews] = @idNews";
+
+              Dictionary<string, object> valeurs = new Dictionary<string, object>();
+              valeurs.Add("idNews", this.IdNews);
+              valeurs.Add("TitreNews", this.TitreNews);
+              valeurs.Add("InfoNews", this.InfoNews);
+              valeurs.Add("idJournalist", this.IdJournalist);
+
+              if (GestionConnexion.Instance.saveData(query, GenerateKey.APP, valeurs))
+              {
+                  return true;
+              }
+              else
+              {
+                  return false;
+              }
+          }
+         
 
     }
 }
