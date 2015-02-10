@@ -40,7 +40,8 @@ namespace Info.DAL
             set { _passwordJournalist = value; }
         }
 
-        //private List<News> ListNews {
+        //private List<News> ListNews
+        //{
         //    get
         //    {
         //        if (_listNews == null)

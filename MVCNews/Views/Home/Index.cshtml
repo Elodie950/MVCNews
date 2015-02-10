@@ -1,40 +1,16 @@
 ﻿@model IEnumerable<Info.DAL.News>
 
-@Html.ActionLink("insérer un nouvel article", "InsererNews", new { area = "Membre", controller = "CrudNews" })
 
-@foreach (var currentNews in Model) {
+    @*@Html.ActionLink("insérer un nouvel article", "InsererNews", new { area = "Membre", controller = "CrudNews" })*@
+   <h2>Découvrez les dernières news</h2>
+    <div id="secwrapper">
+        <section>
 
-    Html.RenderPartial("_news", currentNews);
-}
+            @foreach (var currentNews in Model)
+            {
 
+                Html.RenderPartial("_news", currentNews);
 
-@*<div id="homecontent-top">
-    <div id="homecontent-topleft" class="left">
-        <div id="leadcontainer">
-            <!-- LEAD ARTICLE -->
-            <div id="lead">
-            
-                    <div id="leadheader">
-                        <h3>
-                            <a href="#">News</a><br />
-                        </h3>
-                        <span class="leadmeta"> Feb 8th, 2008 By <a href="#">Michael Oeser</a> </span> <a href="#" class="title"> Wynton Magazine - How the Lead Story works </a>
-                    </div>
-                    <a href="#"><img src="images/leadimage.jpg" alt="" width="350" height="250" id="leadpic" /></a>
-                    <p>This is the lead story. It´s the first thing that catches your visitor´s eyes. Always the most recent post from the &quot;News&quot; category (or whatever category you define) will be displayed. You can add an image like this one by using custom fields. If you don´t know what custom fields are, take look at the <a href="#">WP-Codex here</a>. Only the excerpt of the article will be printed here for space reasons. It´s highly reccomended to use the optional excerpt for better text control.</p>
-                    <div class="read-on"> <a href="#"> [ Continue reading... ] </a> </div>
-        
-            </div>
-        </div>
-        <div id="homebottom"></div>
+            }
+        </section>
     </div>
-    <div id="homecontent-topright" class="right">
-        <div id="hometop-rightcol">
-            <div class="feature"> <a href="#"><img src="images/featured_image03.jpg" alt="" width="258" height="80" /></a> <a href="#" class="title"> About this theme </a> </div>
-            <div class="feature"> <a href="#"><img src="images/featured_image02.jpg" alt="" width="258" height="81" /></a> <a href="#" class="title"> Different page elements and formating </a> </div>
-            <div class="feature"> <a href="#"><img src="images/featured_image01.jpg" alt="" width="258" height="80" /></a> <a href="#" class="title"> Images and Lightbox </a> </div>
-        </div>
-    </div>
-</div>
-<div class="clear"></div>
-*@

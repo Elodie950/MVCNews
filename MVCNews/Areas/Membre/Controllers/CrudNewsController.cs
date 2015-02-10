@@ -39,14 +39,22 @@ namespace MVCNews.Areas.Membre.Controllers
         [HttpGet]
         public ActionResult Modifier(int id)
         {
-            News n = News.ChargerUneNews(id);
-            return View(n);
+                News n = News.ChargerUneNews(id);
+                return View(n);
         }
+
         [HttpPost]
         public ActionResult Modifier(News n)
         {
             n.ModifierNews();
             return RedirectToRoute(new { controller = "Home", action = "Index", area = "" });
         }
+
+        //[HttpPost]
+        //public ActionResult Supprimer(News n)
+        //{
+            
+        //    return RedirectToRoute(new { controller = "Home", action = "Index", area = "" });
+        //}
 	}
 }

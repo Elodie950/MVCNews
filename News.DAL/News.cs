@@ -144,13 +144,14 @@ namespace Info.DAL
                                         SET [TitreNews] = @TitreNews,
                                             [InfoNews] = @InfoNews,
                                             [ImageNews] = @ImageNews,
-                                            [idJournalist] = @idJournalist,
+                                            [idJournalist] = @idJournalist
                                             WHERE [idNews] = @idNews";
 
               Dictionary<string, object> valeurs = new Dictionary<string, object>();
               valeurs.Add("idNews", this.IdNews);
               valeurs.Add("TitreNews", this.TitreNews);
-              valeurs.Add("InfoNews", this.InfoNews);
+              valeurs.Add("InfoNews", this.InfoNews); 
+              valeurs.Add("ImageNews", this.ImageNews);
               valeurs.Add("idJournalist", this.IdJournalist);
 
               if (GestionConnexion.Instance.saveData(query, GenerateKey.APP, valeurs))
@@ -162,7 +163,25 @@ namespace Info.DAL
                   return false;
               }
           }
-         
+
+          public virtual bool SupprimerNews(int id)
+          {
+              News n = News.ChargerUneNews(id);
+            
+              string query = @"Delete * From News where idNews=" + id;
+
+              Dictionary<string, object> valeurs = new Dictionary<string, object>();
+
+              if (GestionConnexion.Instance.saveData(query, GenerateKey.APP, valeurs))
+              {
+                  return true;
+              }
+              else
+              {
+                  return false;
+              }
+
+          }
 
     }
 }

@@ -5,11 +5,16 @@
 }
 
 <form method="post" action="~/Membre/CrudNews/Modifier">
-    <input type="text" value="@Model.TitreNews" name="titreNews"/>
-    <textarea name="infoNews">@Model.InfoNews</textarea>
-    <input type="text" value="@Model.ImageNews" />
-    <input type="hidden" value="@Model.IdNews" />
-    <input type="text" value="@Model.IdJournalist" />
-    <input type="submit" value="Enregistrer"/>
+    <input type="text" value="@Model.TitreNews" name="TitreNews" class="partform" />
+    <br/>
+    <textarea name="InfoNews" class="partform">@Model.InfoNews</textarea>
+    <br/>
+    <input type="text" value="@Model.ImageNews" class="partform" name="ImageNews" />
+    <br/>
+    <input type="hidden" value="@Model.IdNews" name="idNews" />
+    <input type="hidden" value="@Model.DateNews" name="DateNews"/>
+    <input type="text" value="@Model.IdJournalist" class="partform" name="idJournalist" />
+    <br/>
+    <input type="submit" value="Enregistrer" class="btn" />
 
 </form>

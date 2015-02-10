@@ -6,8 +6,11 @@
 
 <h2>Insérez votre article</h2>
 <form action="~/Membre/CrudNews/InsererNewsDB" method="post">
-    <input type="text" placeholder="titre de l'article" name="titreNews" />
-    <textarea placeholder="corps de l'article" name="infoNews"></textarea>
-    <input type="text" placeholder="image" name="imageNews" />
-    <input type="submit" value="Enregistrez" />
+    <input type="text" placeholder="titre de l'article" name="titreNews" class="partform"/>
+    <br/>
+    <textarea placeholder="corps de l'article" name="InfoNews" class="partform"></textarea>
+    <br/>
+    <input type="file" accept="image/*" name="ImageNews" class="partform"  />
+    <br/>
+    <input type="submit" value="Enregistrez" class="btn"/>
 </form>

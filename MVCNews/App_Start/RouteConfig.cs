@@ -19,6 +19,12 @@ namespace MVCNews
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
                 namespaces : new[] { "MVCNews.Controllers" }
             );
+            routes.MapRoute(
+               name: "News",
+               url: "{controller}/{action}/{idNews}/{idjourn}"
+               //defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+               //namespaces: new[] { "MVCNews.Controllers" }
+           );
         }
     }
 }

@@ -5,8 +5,8 @@
 }
 
 <h2>@Model.Nouvelle.TitreNews</h2>
-<img src="~/Content/images/@Model.Nouvelle.ImageNews" alt="" />
-<p>@Model.Nouvelle.InfoNews</p>
-<p>@Model.Auteur.NameJournalist @Model.Auteur.FirstNameJournalist</p>
-<p>@Model.Nouvelle.DateNews.ToShortDateString()</p>
-
+<div id="article">
+    <img src="~/Content/images/@Model.Nouvelle.ImageNews" alt="" style="width:600px;"/>
+    <p class="justifie">@Model.Nouvelle.InfoNews</p>
+    <p><span>Ecrit par @Model.Auteur.NameJournalist @Model.Auteur.FirstNameJournalist le @Model.Nouvelle.DateNews.ToShortDateString()</span></p>
+</div>

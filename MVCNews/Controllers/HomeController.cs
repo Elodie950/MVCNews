@@ -14,8 +14,8 @@ namespace MVCNews.Controllers
         // GET: /Home/
         public ActionResult Index()
         {
-            List<News> mesNews = News.ChargerLesdernieresNews();
-            return View(mesNews);
+                List<News> mesNews = News.ChargerLesdernieresNews();
+                return View(mesNews);
         }
 
         public ActionResult LesNews()
@@ -24,16 +24,17 @@ namespace MVCNews.Controllers
             return View(toutesMesNews);
         }
 
-        [HttpPost]
-        public ActionResult Details(int idNews, int idJournalist)
+        [HttpGet]
+        public ActionResult Details(int idNews, int idJourn)
         {
             JournalistNews jn = new JournalistNews()
             {
                 Nouvelle = News.ChargerUneNews(idNews),
-                Auteur = Journalist.ChargerUnJournalist(idJournalist),
+                Auteur = Journalist.ChargerUnJournalist(idJourn),
 
             };
             return View(jn);
+         
         }
 	}
 }
